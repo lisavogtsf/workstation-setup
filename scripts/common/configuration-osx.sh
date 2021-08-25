@@ -7,7 +7,7 @@ defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  H:mm a'
 killall SystemUIServer
 
 # hide the dock
-defaults write com.apple.dock autohide -bool false
+defaults write com.apple.dock autohide -bool true
 killall Dock
 
 # fast key repeat rate, requires reboot to take effect
@@ -21,7 +21,7 @@ defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #to revert use defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 
-
+# TODO/lvogt erroring because usr/local/bin does not exist
 # modify appearance of dock: remove standard icons, add chrome and iTerm
 if [ ! -e /usr/local/bin/dockutil ]; then
     curl https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil > /usr/local/bin/dockutil
@@ -35,6 +35,7 @@ echo
 echo "Configuring iTerm"
 cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
+# TODO/lvogt ShiftIt may require work with security settings to work properly.
 echo "Configuring ShiftIt"
 open /Applications/ShiftIt.app
 
