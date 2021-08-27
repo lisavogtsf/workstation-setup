@@ -15,7 +15,6 @@ echo "`defaults write org.shiftitapp.ShiftIt multipleActionsCycleWindowSizes YES
 echo
 brew install --cask dash
 brew install --cask postman
-brew install --cask quicklook-json
 
 # Terminals
 

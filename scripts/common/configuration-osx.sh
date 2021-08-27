@@ -7,7 +7,7 @@ defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  H:mm a'
 killall SystemUIServer
 
 # hide the dock
-defaults write com.apple.dock autohide -bool false
+defaults write com.apple.dock autohide -bool true
 killall Dock
 
 # fast key repeat rate, requires reboot to take effect
