@@ -21,16 +21,6 @@ defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #to revert use defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 
-
-# modify appearance of dock: remove standard icons, add chrome and iTerm
-if [ ! -e /usr/local/bin/dockutil ]; then
-    curl https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil > /usr/local/bin/dockutil
-fi
-chmod a+rx,go-w /usr/local/bin/dockutil
-dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
-dockutil --add /Applications/Google\ Chrome.app --no-restart
-dockutil --add /Applications/iTerm.app
-
 echo
 echo "Configuring iTerm"
 cp files/com.googlecode.iterm2.plist ~/Library/Preferences
@@ -40,3 +30,12 @@ open /Applications/ShiftIt.app
 
 echo "Configuring FlyCut"
 open /Applications/Flycut.app
+
+# modify appearance of dock: remove standard icons, add chrome and iTerm
+if [ ! -e /usr/local/bin/dockutil ]; then
+    curl https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil > /usr/local/bin/dockutil
+fi
+chmod a+rx,go-w /usr/local/bin/dockutil
+dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
+dockutil --add /Applications/Google\ Chrome.app --no-restart
+dockutil --add /Applications/iTerm.app
