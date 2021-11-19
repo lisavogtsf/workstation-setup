@@ -8,6 +8,11 @@
 #
 # suggested for self
 # $ ./setup.sh lvogt node
+#
+# most imporant items are
+#
+# - key repeat timing
+# - clock stuff
 
 set +e
 if [[ $(uname) == 'Darwin' ]]
