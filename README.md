@@ -4,9 +4,12 @@ This project automates the process of setting up a new Pivotal machine using a s
 
 ## Lisa Notes
 New M2 laptop for work.
-- trying Rectangle app instead of ShiftIt Shift It
-- what else do I need?
 
+Outside Workstation:
+- trying Rectangle app instead of ShiftIt Shift It
+- trackpad -> tap to click
+- trackpad, via accessibility, three finger drag
+- bumped key repeat rate a little via settings manually
 
 
 ## Goals
