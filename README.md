@@ -2,6 +2,13 @@
 
 This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
 
+## Lisa Notes
+New M2 laptop for work.
+- trying Rectangle app instead of ShiftIt Shift It
+- what else do I need?
+
+
+
 ## Goals
 
 The primary goal of this project is to give people a simple script they can run to make their machine a bit more useful and standard for working on Pivotal projects.
